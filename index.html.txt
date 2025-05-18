@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Magid Atif | Data Analyst Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f7fa; margin: 0; color: #222;}
+    .container { max-width: 1100px; margin: auto; padding: 32px 16px; }
+    header { text-align: center; padding: 32px 0 8px 0;}
+    h1 { margin: 0; font-size: 2.6rem;}
+    .subtitle { color: #a99121; font-size: 1.2rem; margin-bottom: 8px;}
+    .cv-btn { background: #FFD700; color: #222; border: none; padding: 10px 32px; border-radius: 24px; font-weight: bold; cursor: pointer; text-decoration: none; font-size: 1.1rem;}
+    nav { margin: 30px 0 50px 0; text-align: center; }
+    nav a { color: #a99121; text-decoration: none; font-weight: bold; margin: 0 16px; padding-bottom: 4px; border-bottom: 2px solid transparent;}
+    nav a:hover { border-bottom: 2px solid #a99121;}
+    section { margin-bottom: 48px;}
+    .section-title { color: #a99121; font-size: 1.7rem; margin-bottom: 18px;}
+    .skills-list { display: flex; flex-wrap: wrap; gap: 12px; }
+    .skill { background: #ffeeb7; padding: 8px 18px; border-radius: 20px; font-size: 1rem; }
+    .projects-gallery { display: flex; flex-wrap: wrap; gap: 20px; }
+    .project-card { width: 320px; background: #fffbea; border-radius: 14px; box-shadow: 0 2px 16px #b8b8b833; padding: 12px 8px 22px 8px; display: flex; flex-direction: column; align-items: center; margin-bottom: 18px;}
+    .project-img { width: 300px; height: 170px; object-fit: cover; border-radius: 14px; cursor: pointer; transition: transform .18s; box-shadow: 0 1px 8px #d8d8d822;}
+    .project-img:hover { transform: scale(1.04);}
+    .project-caption { margin-top: 10px; min-height: 110px; font-size: 1.02rem; color: #333; }
+    .exp, .cert, .edu { margin-bottom: 18px; }
+    .exp-title { font-weight: bold; color: #373e6b; }
+    .exp-role { color: #a99121; font-size: 1.05rem;}
+    .contact { background: #f3eacf; padding: 18px 22px; border-radius: 14px; max-width: 500px;}
+    .contact a { color: #a99121; text-decoration: none;}
+    .modal { display: none; position: fixed; z-index: 30; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.87);}
+    .modal-content { margin: auto; display: block; max-width: 80vw; max-height: 80vh; border-radius: 15px;}
+    .modal-close { position: absolute; top: 35px; right: 48px; color: #FFD700; font-size: 42px; font-weight: bold; cursor: pointer;}
+    @media (max-width:600px) {
+      .projects-gallery { flex-direction: column; align-items: center;}
+      .project-card, .project-img { width: 98vw !important; max-width: 98vw !important;}
+      .project-img { height: 38vw; }
+      .container { padding: 10px; }
+      .contact { max-width: 99vw;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Magid Atif</h1>
+      <div class="subtitle">Data Analyst | Business Intelligence | Dashboard Expert</div>
+      <a class="cv-btn" href="Magid%20Atif%20Gilada%20_CV.pdf" download>Download CV</a>
+    </header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+      <div class="section-title">About Me</div>
+      <p>
+        I am a data analyst with 4+ years of experience in data analytics, predictive modeling, and dashboard development, specializing in healthcare and e-commerce analytics. I excel at turning complex data into actionable insights using Power BI, Tableau, Python, and SQL, helping organizations drive operational and financial performance. Passionate about leveraging data to solve real business problems and empower better decision-making.
+      </p>
+    </section>
+
+    <section id="skills">
+      <div class="section-title">Skills</div>
+      <div class="skills-list">
+        <span class="skill">Power BI</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Python</span>
+        <span class="skill">R</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Excel</span>
+        <span class="skill">Predictive Modeling</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Dashboard Design</span>
+        <span class="skill">Data Visualization</span>
+        <span class="skill">Healthcare Analytics</span>
+        <span class="skill">Statistical Analysis</span>
+        <span class="skill">Reporting</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">Projects & Dashboards
+        <button id="lang-en" style="margin-left:16px;background:#ffeeb7;border:none;padding:4px 14px;border-radius:14px;cursor:pointer;font-weight:bold;" onclick="setLang('en')">English</button>
+        <button id="lang-ar" style="background:#ffeeb7;border:none;padding:4px 14px;border-radius:14px;cursor:pointer;font-weight:bold;" onclick="setLang('ar')">العربية</button>
+      </div>
+      <div class="projects-gallery">
+        <!-- Amazon Dashboard -->
+        <div class="project-card">
+          <img class="project-img" src="Screenshot 2025-04-30 184132.png" alt="Amazon Sales Dashboard" onclick="showModal(this)">
+          <div class="project-caption">
+            <div class="caption-en">
+              Comprehensive Amazon sales analysis leveraging Excel, Python, and Power BI. Tasks included data cleaning, sales and review analysis, and the development of interactive dashboards to reveal trends, optimize business performance, and guide strategic decision-making. Delivered actionable insights for marketing and inventory management, improved data quality by 30%, and reduced analysis time by 40% with Python automation.
+            </div>
+            <div class="caption-ar" style="display:none; direction:rtl; text-align:right;">
+              تحليل شامل لبيانات مبيعات Amazon باستخدام Excel وPython وPower BI لتحديد الاتجاهات وتحسين الأداء ودعم القرارات الاستراتيجية. شمل المشروع تنظيف البيانات، تحليل المبيعات والمراجعات، وتصميم لوحات بيانات تفاعلية. ساهمت التحليلات في تقديم توصيات عملية لتحسين التسويق وإدارة المخزون، مع تحسين جودة البيانات بنسبة 30% وتقليل وقت التحليل بنسبة 40% عبر أتمتة Python.
+            </div>
+          </div>
+        </div>
+        <!-- Jumia Dashboard -->
+        <div class="project-card">
+          <img class="project-img" src="Screenshot 2025-04-30 203749.png" alt="Jumia Super Store Dashboard" onclick="showModal(this)">
+          <div class="project-caption">
+            <div class="caption-en">
+              In-depth analysis of Jumia Super Store sales data using Excel, Python, and Power BI. Focused on data cleaning, exploratory analysis by sub-category, region, and segment, and the creation of time-based interactive dashboards. Improved data accuracy by 25%, streamlined reporting, and empowered management to identify high-performing categories and regions.
+            </div>
+            <div class="caption-ar" style="display:none; direction:rtl; text-align:right;">
+              تحليل شامل لمبيعات Jumia Super Store باستخدام Excel وPython وPower BI. شمل تنظيف ومعالجة البيانات وتحليل الأداء حسب الفئات والمواقع والفترات الزمنية وتصميم لوحات تفاعلية. أدى المشروع لتحسين جودة البيانات بنسبة 25% وتسهيل تقارير الأداء، مع تمكين الإدارة من تحديد الفئات والمناطق الأعلى مبيعًا.
+            </div>
+          </div>
+        </div>
+        <!-- Online Sales Dashboard -->
+        <div class="project-card">
+          <img class="project-img" src="Dashboard  (1).png" alt="Online Sales Dashboard" onclick="showModal(this)">
+          <div class="project-caption">
+            <div class="caption-en">
+              Full-cycle online sales analysis using Excel, Python, and Tableau. Processed and cleaned sales and review data, performed multi-dimensional analytics by country, category, and payment type, and developed an interactive dashboard for business users. Enabled stakeholders to monitor KPIs such as total sales, customer satisfaction, and payment methods, and supported strategic planning.
+            </div>
+            <div class="caption-ar" style="display:none; direction:rtl; text-align:right;">
+              تحليل شامل لبيانات المبيعات عبر الإنترنت باستخدام Excel وPython وTableau لتحديد الاتجاهات وتحليل الأداء حسب البلدان والفئات ودعم اتخاذ القرار. شمل تنظيف البيانات وتحليل المبيعات والمراجعات وتصميم لوحة تفاعلية تعرض النتائج الرئيسية وتدعم التخطيط الاستراتيجي.
+            </div>
+          </div>
+        </div>
+        <!-- HR Attrition Dashboard -->
+        <div class="project-card">
+          <img class="project-img" src="Screenshot 2025-05-08 100306.png" alt="HR Attrition Dashboard" onclick="showModal(this)">
+          <div class="project-caption">
+            <div class="caption-en">
+              Comprehensive HR attrition analysis and dashboarding in Tableau. Cleaned and merged employee datasets, conducted segmentation by demographic factors and job roles, and visualized attrition trends. Delivered actionable insights to HR teams for reducing turnover and optimizing workforce strategies.
+            </div>
+            <div class="caption-ar" style="display:none; direction:rtl; text-align:right;">
+              تحليل شامل لمعدل دوران الموظفين باستخدام Tableau، يشمل معالجة بيانات الموظفين وتحليلها حسب الفئات الوظيفية والعمرية، وتصور الاتجاهات بشكل تفاعلي. تم تقديم رؤى عملية ساعدت في تقليل معدل التسرب الوظيفي وتحسين سياسات الموارد البشرية.
+            </div>
+          </div>
+        </div>
+        <!-- Institutional Projects Performance (Arabic) -->
+        <div class="project-card">
+          <img class="project-img" src="ea64ef089607d2aa18d90c67977f9813.png" alt="Institutional Projects Performance" onclick="showModal(this)">
+          <div class="project-caption">
+            <div class="caption-en">
+              Institutional performance dashboard for project tracking and cost analysis using Power BI. Included data cleaning, building interactive dashboards, and delivering executive recommendations to enhance operational efficiency and monitor project progress in real time.
+            </div>
+            <div class="caption-ar" style="display:none; direction:rtl; text-align:right;">
+              لوحة مؤشرات الأداء المؤسسي لمتابعة سير المشاريع وتحليل التكاليف والإنجاز باستخدام Power BI. شمل العمل تنظيف ومعالجة بيانات المشاريع، وتصميم لوحات تفاعلية تعرض التوزيع الجغرافي والزماني وحالة كل مشروع، وتقديم توصيات تنفيذية لتحسين كفاءة الأداء.
+            </div>
+          </div>
+        </div>
+        <!-- أضف المزيد من المشاريع بنفس النمط حسب حاجتك -->
+      </div>
+      <p style="margin-top:18px;">* For more project details or interactive demos, please <a href="#contact">contact me</a> or visit my <a href="https://www.linkedin.com/in/magid-atif85/" target="_blank">LinkedIn</a>.</p>
+    </section>
+
+    <section id="experience">
+      <div class="section-title">Experience</div>
+      <div class="exp">
+        <div class="exp-title">Data Analyst, Revenue Cycle Management</div>
+        <div class="exp-role">Egyptian Healthcare Authority, Cairo — 2022 - Present</div>
+        <ul>
+          <li>Analyzed data for 6 branches, optimized revenue cycle, increased productivity by 15%.</li>
+          <li>Developed Tableau dashboards to identify trends and support decision-making.</li>
+        </ul>
+      </div>
+      <div class="exp">
+        <div class="exp-title">Director of Pharmacy Department</div>
+        <div class="exp-role">Egyptian Healthcare Authority, Luxor — 2021 - 2022</div>
+        <ul>
+          <li>Led therapy management programs, reducing medication-related hospital readmissions.</li>
+          <li>Improved patient outcomes and satisfaction through data-driven enhancements.</li>
+        </ul>
+      </div>
+      <div class="exp">
+        <div class="exp-title">Clinical Pharmacist</div>
+        <div class="exp-role">ISIS Hospital - Health Affairs, Luxor — 2016 - 2017</div>
+        <ul>
+          <li>Developed evidence-based clinical protocols, improving pharmaceutical care delivery.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="section-title">Certifications</div>
+      <div class="cert">Data Analysis Specialist – Digital Egypt Builder’s Initiative (DEBI)</div>
+      <div class="cert">Revenue Cycle Management (RCM) in Healthcare – Alison</div>
+      <div class="cert">Master of Power BI – Alison</div>
+      <div class="cert">Python Programming – Alison</div>
+      <div class="cert">Microsoft Excel Formulas & Functions – Analytics Vidhya</div>
+      <div class="cert">Pharmacovigilance – Egyptian Drug Authority</div>
+      <div class="cert">Leader Preparation Diploma – Sadat Academy</div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">Contact</div>
+      <div class="contact">
+        <p><strong>Email:</strong> <a href="mailto:magid.a.matta85@gmail.com">magid.a.matta85@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/magid-atif85/" target="_blank">linkedin.com/in/magid-atif85</a></p>
+        <p><strong>Location:</strong> Cairo, Egypt</p>
+      </div>
+    </section>
+  </div>
+  <!-- Gallery Modal -->
+  <div id="modal" class="modal" onclick="hideModal()">
+    <span class="modal-close" onclick="hideModal()">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
+  <script>
+    function showModal(img) {
+      document.getElementById('modal').style.display = 'block';
+      document.getElementById('modal-img').src = img.src;
+    }
+    function hideModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
+    function setLang(lang) {
+      const en = document.querySelectorAll('.caption-en');
+      const ar = document.querySelectorAll('.caption-ar');
+      if(lang === 'en') {
+        en.forEach(e=>e.style.display='block');
+        ar.forEach(e=>e.style.display='none');
+      } else {
+        en.forEach(e=>e.style.display='none');
+        ar.forEach(e=>e.style.display='block');
+      }
+    }
+  </script>
+</body>
+</html>
